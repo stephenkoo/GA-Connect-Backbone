@@ -1,10 +1,11 @@
 var User = Backbone.Model.extend({
-    urlRoot: 'http://localhost:3000/api/users'
+    urlRoot: 'http://localhost:8080/api/users',
+    localStorage: true
 });
 
 var Users = Backbone.Collection.extend({
 	model: User,
-    urlRoot: 'http://localhost:3000/api/users'
+    urlRoot: 'http://localhost:8080/api/users'
 });
 
 // Instantiate a few users
@@ -23,9 +24,9 @@ var adam = new User({
 	linkedinURL: 'http://linkedin.com/adamapplebee.com',
 	country: 'Australia',
 	city: 'Melbourne',
-	course: [{ 
-		courseName: 'Web Development Immersive', 
-		courseStart: '2016-01-01', 
+	course: [{
+		courseName: 'Web Development Immersive',
+		courseStart: '2016-01-01',
 		courseEnd: '2016-04-01',
 		}]
 });
@@ -44,11 +45,13 @@ var mark = new User({
 	linkedinURL: 'http://linkedin.com/markmathias.com',
 	country: 'Australia',
 	city: 'Melbourne',
-	course: [{ 
-		courseName: 'Web Development Immersive', 
-		courseStart: '2016-02-01', 
+	course: [{
+		courseName: 'Web Development Immersive',
+		courseStart: '2016-02-01',
 		courseEnd: '2016-05-01',
 		}]
 });
 
-var users = new Users([adam, mark])
+var users = new Users([adam, mark]);
+
+// users.models[0].save({ajaxSync: true});

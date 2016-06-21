@@ -7,7 +7,7 @@ var Router = Backbone.Router.extend({
 	showIndex: function(){
 		var users = new Users();
 
-		dishes.fetch().done(function(){
+		users.fetch().done(function(){
 			var indexView = new IndexView( { collection: users } );
 			$('main').html(indexView.render().el);
 		});

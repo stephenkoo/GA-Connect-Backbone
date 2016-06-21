@@ -1,5 +1,5 @@
 var IndexView = Backbone.View.extend({
-	className: 'container'
+	className: 'container',
 
 	render: function() {
 		// grabs the template from index.html
