@@ -12,4 +12,12 @@ var Router = Backbone.Router.extend({
 			$('main').html(indexView.render().el);
 		});
 	},
+
+	showUser : function(id) {
+		var user = new User({ id: id});
+		user.fetch().done(function(){
+			var view = new ShowView({ model: user });
+			$('.users').html( view.render().el )
+		});
+	}
 })

@@ -32,9 +32,11 @@
 	<div class="IndexTemplate" type="text/x-underscore-template">
 		<div class="Students">
 			<div class="List">
-
 			</div>
 		</div>
+	</div>
+
+	<div class="Sidebar">
 		<div class="Content">
 			<h2><a href="#users/{{ id }}">{{ firstName }} {{ lastName }}</a></h2>
 			<p>{{ course }}</p>
@@ -43,13 +45,37 @@
 		</div>
 	</div>
 
-	<div class="Sidebar">
-	</div>
+	<script class="UserTemplate" type="text/x-underscore-template">
+		<div class="slider">
+			<div class="like">&hearts;</div>
+			<div class="slider-wrapper">
+				<img src="{{ image_url }}" alt="">
+				<img src="{{ image_url }}" alt="">
+			</div>
+		</div>
+		<div class="content">
+			<h2><a href="#trucks/{{ id }}">{{ name }}</a></h2>
+			<div>0</div>
+		</div>
+	</script>
+	
+	<script class="ShowUserTemplate" type="text/x-underscore-template">
+		<div class="notslider">
+			<div class="like">&hearts;</div>
+			<img src="{{ image_url }}" alt="">
+			<img src="{{ image_url }}" alt="">
+		</div>
+		<div class="content">
+			<h2>{{ name }}</h2>
+			<div>0</div>
+			<h3><a href="#">Back to all trucks</h3>
+		</div>
+	</script>
 
     <script src="js/libs/jquery/dist/jquery.min.js"></script>
     <script src="js/libs/underscore/underscore-min.js"></script>
 	<script src="js/libs/backbone/backbone-min.js"></script>
-  <script src="js/libs/backbone-localstorage/backbone-localStorage.min.js"></script>
+  	<script src="js/libs/backbone-localstorage/backbone-localStorage.min.js"></script>
 	<script src="js/libs/mustache.js/mustache.min.js"></script>
     <script src="js/libs/what-input/what-input.min.js"></script>
     <script src="js/libs/foundation-sites/dist/foundation.min.js"></script>

@@ -1,0 +1,25 @@
+{
+  "name": "ga-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenkoo/GA-Connect-Backbone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephenkoo/GA-Connect-Backbone/issues"
+  },
+  "homepage": "https://github.com/stephenkoo/GA-Connect-Backbone#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2"
+  }
+}

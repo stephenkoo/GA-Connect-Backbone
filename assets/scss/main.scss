@@ -1,9 +1,2 @@
-@import 'vendors/foundation_and_overrides.scss';
-@import 'layouts/grid';
-@import 'layouts/main';
-@import 'layouts/sidebar';
-@import 'layouts/navigation';
-
-@import 'modules/button';
-
-@import 'hacks/shame';
+@import 'foundation';
+@import 'foundation/settings';
