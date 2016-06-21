@@ -9,23 +9,43 @@
   </head>
 
   <body>
-    <header class="Header">
-        <a class="HeaderLogo" href="#" title="GA Connect">
-            <img class="HeaderLogo__img" src="assets/imgs/GA/GA_Cog.png" alt="i">
-            <h1> Connect </h1>
-        </a>
-        <nav class="HeaderNav">
-            <ul class="HeaderNav__list">
-                <li class="HeaderNav__item">
-                    <a href="#" class="HeaderNav__link">Sign In</a>
-                </li>
-            </ul>                
-        </nav>
-    </header>
+	<div class="top-bar">
+	  <div class="top-bar-left">
+	    <ul class="dropdown menu" data-dropdown-menu>
+	      <li class="menu-text">Site Title</li>
+	      <li>
+	        <a href="#">One</a>
+	        <ul class="menu vertical">
+	          <li><a href="#">One</a></li>
+	          <li><a href="#">Two</a></li>
+	          <li><a href="#">Three</a></li>
+	        </ul>
+	      </li>
+	      <li><a href="#">Two</a></li>
+	      <li><a href="#">Three</a></li>
+	    </ul>
+	  </div>
+	  <div class="top-bar-right">
+	      <li>
+	        <a href="#">One</a>
+	        <ul class="menu vertical">
+	          <li><a href="#">One</a></li>
+	          <li><a href="#">Two</a></li>
+	          <li><a href="#">Three</a></li>
+	        </ul>
+	      </li>
+	      <li><a href="#">Two</a></li>
+	      <li><a href="#">Three</a></li>
+	      <ul class="dropdown menu" data-dropdown-menu>
+		<li><a href="#">Item 1</a></li>
+		<li><a href="#">Item 2</a></li>
+		<li><a href="#">Item 3</a></li>
+		<li><a href="#">Item 4</a></li>
+		</ul>
+	    </ul>
+	  </div>
+	</div>
 
-	<main>
-	</main>
-	
 	<div class="IndexTemplate" type="text/x-underscore-template">
 		<div class="Students">
 			<div class="List">
@@ -49,9 +69,7 @@
 	<script src="js/libs/mustache.js/mustache.min.js"></script>
     <script src="js/libs/what-input/what-input.min.js"></script>
     <script src="js/libs/foundation-sites/dist/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+
 	
 	<!-- Views & Models -->
 	<script src="js/views/IndexView.js"></script>

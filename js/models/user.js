@@ -50,3 +50,5 @@ var mark = new User({
 		courseEnd: '2016-05-01',
 		}]
 });
+
+var users = new Users([adam, mark])
