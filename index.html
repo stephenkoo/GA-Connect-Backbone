@@ -36,6 +36,19 @@
 		</div>
 	</div>
 
+	<script id="user-template" type="text/x-underscore-template">
+		<div class="slider">
+			<div class="slider-wrapper">
+				<img src="{{ image_url }}" alt="">
+				<img src="{{ image_url }}" alt="">
+			</div>
+		</div>
+		<div class="content">
+			<h2><a href="#trucks/{{ id }}">{{ name }}</a></h2>
+			<div>0</div>
+		</div>
+	</script>
+
 	<div class="Sidebar">
 		<div class="Content">
 			<h2><a href="#users/{{ id }}">{{ firstName }} {{ lastName }}</a></h2>
