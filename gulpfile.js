@@ -1,24 +1,34 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    sass         = require('gulp-sass');
 
 var paths = {
-  scssSource: 'assets/scss/',
-  cssDestination: 'assets/css/'
+    cssSrc: ['assets/styles/*.scss', 'assets/styles/**/*.scss'],
+    cssDest: 'public/css/',
+    htmlSrc: 'public/',
+  sass: [ 
+    'node_modules/foundation-sites/scss',
+    'node_modules/motion-ui/src'
+  ]
 };
 
-gulp.task('styles', function () {
-  return gulp.src(
-  	[paths.scssSource + '**/main .scss'])
-    	.pipe(sass({
-    			includePaths: [
-    				'./js/libs/foundation-sites/scss'
-				]
-    		}))
-    	.pipe(gulp.dest(paths.cssDestination));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch(paths.scssSource + '**/*.scss', ['styles']);
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function(){
+  return gulp.src(paths.cssSrc[0])
+    .pipe(sass({
+        includePaths: paths.sass,
+        outputStyle: 'compressed'
+    })
+      .on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 1 versions']
+    }))
+    .pipe(gulp.dest(paths.cssDest));
 });
 
-gulp.task('default', ['styles']);
+// Static Server + watching scss/html files
+gulp.task('watch', function(){
+  gulp.watch(paths.cssSrc, ['sass']);
+});
+
+gulp.task('default', ['sass', 'watch']);
